@@ -1,5 +1,6 @@
 # Penilaian Proyek
 Proyek ini berhasil mendapatkan bintang 5/5 pada submission dicoding course Machine Learning Operations (MLOps).
+
 <img src="https://raw.githubusercontent.com/AbiyaMakruf/Dicoding-PengembanganDanPengoperasianSistemMachineLearning/main/images/nilai.png" width="500">
 
 Kriteria tambahan yang saya kerjakan sehingga mendapat nilai terbaik:
