@@ -1,17 +1,17 @@
-# Submission 1: Nama Proyek Anda
-Nama:
+# Submission 2: Predicting Hiring Pipeline
+Nama: Muhammad Abiya Makruf
 
-Username dicoding:
+Username dicoding: abiyamf
 
 | | Deskripsi |
 | ----------- | ----------- |
-| Dataset | [nama dataset](https://www.kaggle.com/) |
-| Masalah | Deskripsi masalah yang di angkat |
-| Solusi machine learning | Deskripsi solusi machine learning yang akan dibuat |
-| Metode pengolahan | Deskripsi metode pengolahan data yang digunakan |
-| Arsitektur model | Deskripsi arsitektur model yang diguanakan |
-| Metrik evaluasi | Deksripsi metrik yang digunakan untuk mengevaluasi performa model |
-| Performa model | Deksripsi performa model yang dibuat |
-| Opsi deployment | Deksripsi tentang opsi deployment |
-| Web app | Tautan web app yang digunakan untuk mengakses model serving. Contoh: [nama-model](https://model-resiko-kredit.herokuapp.com/v1/models/model-resiko-kredit/metadata)|
-| Monitoring | Deksripsi terkait hasil monitoring dari model serving |
+| Dataset | Dataset yang digunakan adalah [Predicting Hiring Decisions in Recruitment Data](https://www.kaggle.com/datasets/rabieelkharoua/predicting-hiring-decisions-in-recruitment-data) data ini memberikan wawasan tentang faktor-faktor yang memengaruhi keputusan perekrutan.|
+| Masalah | Masalah yang diangkat dalam proyek ini adalah prediksi keputusan perekrutan berdasarkan data kandidat yang meliputi usia, jenis kelamin, tingkat pendidikan, tahun pengalaman, jumlah perusahaan sebelumnya, dll. Mengingat proses perekrutan sangat penting untuk menentukan kandidat yang tepat bagi sebuah perusahaan, memiliki model yang dapat memprediksi keputusan perekrutan berdasarkan data kandidat historis sangatlah bermanfaat. Model ini dapat membantu perusahaan dalam mengotomatisasi dan mempercepat proses seleksi, memastikan objektivitas, dan meningkatkan efisiensi dalam pengambilan keputusan perekrutan. |
+| Solusi machine learning | Solusi machine learning yang diusulkan adalah membangun pipeline machine learning yang mencakup preprocessing data, pelatihan model, evaluasi model, dan deployment model menggunakan TensorFlow Serving. Pipeline ini akan menggunakan TFX (TensorFlow Extended) untuk mengelola alur kerja. |
+| Metode pengolahan | Preprocessing Data <br> Metode pengolahan data yang digunakan meliput: <br> 1. Normalisasi: Fitur numerik dinormalisasi menggunakan `tft.scale_to_0_1`|
+| Arsitektur model | Arsitektur model yang digunakan adalah model neural network dengan beberapa lapisan fully connected. Berikut adalah arsitektur model yang digunakan: <br><br> 1. Input layer: Mengambil fitur-fitur yang telah ditransformasikan. <br> 2. Hidden Layer: tiga lapisan dense menggunakan aktivasi ReLU. <br> 3. Output Layer: Lapisan dense dengan 1 unit dan fungsi aktivasi sigmoid. <br> 4. Optimizer: Adam. <br> 5. Loss: binary_crossentropy. <br><br> Terdapat juga [tuner](https://github.com/AbiyaMakruf/Dicoding-PengembanganDanPengoperasianSistemMachineLearning/blob/main/modules/tuner.py)  yang memiliki urutan arsitektur yang serupa dengan tambahan layer dropout.  |
+| Metrik evaluasi | Metrik yang digunakan untuk mengevaluasi performa model adalah: <br><br> 1. Precision: Metrik yang digunakan untuk mengukur akurasi dari prediksi positif model.<br> 2. Recall: Metrik yang digunakan untuk mengukur kemampuan model dalam menemukan semua instance positif yang sebenarnya. <br> 3. BinaryAccuracy: Akurasi khusus untuk masalah klasifikasi dengan jumlah kelas adalah dua. <br><br> Model yang dibuat dinyatakan 'blessed' jika BinaryAccuracy > 0.8.|
+| Performa model | Performa model dievaluasi menggunakan dataset evaluasi. Hasil evaluasi menunjukkan bahwa model memiliki akurasi yang tinggi dalam mengklasifikasikan recruitment data dengan menggunakan fitur-fitur yang tersedia. Hasil hyperparameter tuning menunjukkan bahwa model dengan arsitektur tertentu memberikan performa terbaik dengan akurasi mencapai lebih dari 87%. |
+| Opsi deployment | Model yang telah dibuat dapat dideploy menggunakan beberapa opsi seperti [heroku](https://www.heroku.com/) dan [railway](https://railway.app/). Proyek ini melakukan deploy model ke platform railway.|
+| Web app | Tautan web app yang digunakan untuk mengakses model serving. [cc-model](https://proyek-akhir-mlops-production.up.railway.app/v1/models/cc-model/metadata)|
+| Monitoring | Memonitor model yang sudah dideploy menggunakan Prometheus dan gafana.  Hasil monitoring menggunakan `request_count` ataupun `session_created` memberikan hasil yang bagus, setiap request prediksi yang masuk ke model tercatat dengan baik dan semenjak sessi dibentuk model tidak pernah down.|
