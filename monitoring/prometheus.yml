@@ -1,13 +1,13 @@
 global:
-  scrape_interval: 15s
-  evaluation_interval: 15s
+  scrape_interval: 5s
+  evaluation_interval: 5s
   external_labels:
     monitor: "tf-serving-monitor"
- 
- 
+
 scrape_configs:
   - job_name: "prometheus"
     scrape_interval: 5s 
     metrics_path: /monitoring/prometheus/metrics 
+    scheme: "https" 
     static_configs:
-      - targets: ['proyek-akhir-mlops-production.up.railway.app'] 
+      - targets: ['proyek-akhir-mlops-production.up.railway.app']
