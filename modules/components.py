@@ -171,6 +171,7 @@ def init_components(config):
         schema_gen,
         example_validator,
         transform,
+        tuner,
         trainer,
         model_resolver,
         evaluator,

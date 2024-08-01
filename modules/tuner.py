@@ -86,8 +86,8 @@ def tuner_fn(fn_args: FnArgs):
 
     tuner = kt.RandomSearch(
         model_builder,
-        objective='val_accuracy',
-        max_trials=15,
+        objective='val_binary_accuracy',
+        max_trials=10,
         directory=fn_args.working_dir,
         project_name='kt_hyperband'
     )
