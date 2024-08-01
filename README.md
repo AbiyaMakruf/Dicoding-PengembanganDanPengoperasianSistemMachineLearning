@@ -1,6 +1,12 @@
 # Penilaian Proyek
-Proyek ini berhasil mendapatkan bintang ?/5 pada submission dicoding course Machine Learning Operations (MLOps).
-<img src="https://raw.githubusercontent.com/AbiyaMakruf/Dicoding-PengembanganDanPengoperasianSistemMachineLearning/main/image/nilai.png" width="500">
+Proyek ini berhasil mendapatkan bintang 5/5 pada submission dicoding course Machine Learning Operations (MLOps).
+<img src="https://raw.githubusercontent.com/AbiyaMakruf/Dicoding-PengembanganDanPengoperasianSistemMachineLearning/main/images/nilai.png" width="500">
+
+Kriteria tambahan yang saya kerjakan sehingga mendapat nilai terbaik:
+1. Memanfaatkan komponen Tuner untuk menjalankan proses hyperparameter tuning secara otomatis.
+2. Menerapkan prinsip clean code dalam membuat machine learning pipeline.  
+3. Menambahkan sebuah berkas notebook untuk menguji dan melakukan prediction request ke sistem machine learning yang telah dijalankan di cloud.
+4. Menyinkronkan Prometheus dengan Grafana untuk membuat dashboard monitoring yang lebih menarik.
 
 # Laporan Proyek
 Nama: Muhammad Abiya Makruf
