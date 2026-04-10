@@ -1,7 +1,7 @@
 # Penilaian Proyek
 Proyek ini berhasil mendapatkan bintang 5/5 pada submission dicoding course Machine Learning Operations (MLOps).
 
-<img src="https://raw.githubusercontent.com/AbiyaMakruf/Dicoding-PengembanganDanPengoperasianSistemMachineLearning/main/images/nilai.png" width="500">
+![Bukti Penilaian Bintang 5](readme/nilai.png)
 
 Kriteria tambahan yang saya kerjakan sehingga mendapat nilai terbaik:
 1. Memanfaatkan komponen Tuner untuk menjalankan proses hyperparameter tuning secara otomatis.
@@ -12,7 +12,6 @@ Kriteria tambahan yang saya kerjakan sehingga mendapat nilai terbaik:
 # Laporan Proyek
 Nama: Muhammad Abiya Makruf
 
-Username dicoding: abiyamf
 
 | | Deskripsi |
 | ----------- | ----------- |
@@ -22,9 +21,9 @@ Username dicoding: abiyamf
 | Metode pengolahan | Preprocessing Data <br> Metode pengolahan data yang digunakan meliput: <br> 1. Normalisasi: Fitur numerik dinormalisasi menggunakan `tft.scale_to_0_1`|
 | Arsitektur model | Arsitektur model yang digunakan adalah model neural network dengan beberapa lapisan fully connected. Berikut adalah arsitektur model yang digunakan: <br><br> 1. Input layer: Mengambil fitur-fitur yang telah ditransformasikan. <br> 2. Hidden Layer: tiga lapisan dense menggunakan aktivasi ReLU. <br> 3. Output Layer: Lapisan dense dengan 1 unit dan fungsi aktivasi sigmoid. <br> 4. Optimizer: Adam. <br> 5. Loss: binary_crossentropy. <br><br> Terdapat juga [tuner](https://github.com/AbiyaMakruf/Dicoding-PengembanganDanPengoperasianSistemMachineLearning/blob/main/modules/tuner.py)  yang memiliki urutan arsitektur yang serupa dengan tambahan layer dropout.  |
 | Metrik evaluasi | Metrik yang digunakan untuk mengevaluasi performa model adalah: <br><br> 1. Precision: Metrik yang digunakan untuk mengukur akurasi dari prediksi positif model.<br> 2. Recall: Metrik yang digunakan untuk mengukur kemampuan model dalam menemukan semua instance positif yang sebenarnya. <br> 3. BinaryAccuracy: Akurasi khusus untuk masalah klasifikasi dengan jumlah kelas adalah dua. <br><br> Model yang dibuat dinyatakan 'blessed' jika BinaryAccuracy > 0.8.|
-| Performa model | Performa model dievaluasi menggunakan dataset evaluasi. Hasil evaluasi menunjukkan bahwa model memiliki akurasi yang tinggi dalam mengklasifikasikan recruitment data dengan menggunakan fitur-fitur yang tersedia. Hasil hyperparameter tuning menunjukkan bahwa model dengan arsitektur tertentu memberikan performa terbaik dengan akurasi mencapai lebih dari 87%. |
-| Opsi deployment | Model yang telah dibuat dapat dideploy menggunakan beberapa opsi seperti [heroku](https://www.heroku.com/) dan [railway](https://railway.app/). Proyek ini melakukan deploy model ke platform railway.|
-| Web app | Tautan web app yang digunakan untuk mengakses model serving. [cc-model](https://proyek-akhir-mlops-production.up.railway.app/v1/models/cc-model/metadata)|
+| Performa model | Performa model dievaluasi menggunakan dataset evaluasi. Hasil evaluasi menunjukkan bahwa model memiliki akurasi yang tinggi dalam mengklasifikasikan recruitment data dengan menggunakan fitur-fitur yang tersedia. Hasil hyperparameter tuning (dengan 10 trial) menunjukkan bahwa model dengan arsitektur tertentu memberikan performa terbaik dengan akurasi mencapai lebih dari 87%. Hasil evaluasi pada data evaluasi juga menunjukkan Precision sebesar 76.09%, dan Recall sebesar 80.46%. |
+| Opsi deployment | Model yang telah dibuat, dideploy menggunakan opsi [railway](https://railway.app/).|
+| Web app | Tautan web app yang digunakan untuk mengakses model serving. [cc-model](https://mlops-production-1209.up.railway.app/v1/models/cc-model/metadata)|
 | Monitoring | Memonitor model yang sudah dideploy menggunakan Prometheus dan gafana.  Hasil monitoring menggunakan `request_count` ataupun `session_created` memberikan hasil yang bagus, setiap request prediksi yang masuk ke model tercatat dengan baik dan semenjak sessi dibentuk model tidak pernah down.|
 
 # How to reproduce
